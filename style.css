@@ -1,0 +1,292 @@
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --primary-color: #243642;
+    --secondary-color: #387478;
+    --font-color: #E2F1E7;
+    --font-sm: 14px;
+    --font-base: 16px;
+    --font-lg: 18px;
+    --font-xl: 20px;
+    --font-2xl: 24px;
+    --font-3xl: 30px;
+    --font-4xl: 36px;
+    --font-5xl: 48px;
+    --font-6xl: 60px;
+    --font-7xl: 72px;
+    --font-8xl: 96px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Start */
+
+.navigationBar {
+    height: 55px;
+    width: 100%;
+    color: var(--font-color);
+    background-color: var(--secondary-color);
+    position: fixed;
+}
+
+.navWrapper {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navTitle {
+    font-family: var(--montserrat);
+    font-weight: 900;
+    font-size: var(--font-2xl);
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+.navContents {
+    height: 50px;
+    font-family: var(--poppins);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.navContents a {
+    padding: 14px 25px;
+    color: var(--font-color);
+    text-decoration: none;
+    transition: 100ms ease;
+}
+
+.navContents a:hover {
+    background-color: var(--primary-color);
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.navContents button {
+    display: none;
+}
+
+/* Navigation Bar End */
+
+/* First Page Start */
+
+.firstPage {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+}
+
+.firstPageContainer {
+    padding: 0 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.firstPageContainerContentsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 50%;
+    width: 65%;
+}
+
+.firstPageContainerContentsText h1 {
+    font-family: var(--poppins);
+    font-weight: 700;
+    font-size: var(--font-5xl);
+    line-height: 3rem;
+    text-align: left;
+    margin: 0;
+}
+
+.firstPageContainerContentsText hr {
+    width: 100%;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border: none;
+    margin: 10px 0;
+}
+
+.firstPageContainerContentsText h2 {
+    font-family: var(--poppins);
+    font-weight: 500;
+    font-size: var(--font-xl);
+    text-align: left;
+    margin: 0;
+}
+
+.firstPageContainerContentsButton a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--poppins);
+    font-weight: 600;
+    font-size: var(--font-lg);
+    padding: 10px 40px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: 100ms ease;
+}
+
+.firstPageContainerContentsButton a:hover {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    .bx-down-arrow-circle {
+        color: var(--font-color);
+    }
+}
+
+.bx-down-arrow-circle {
+    color: var(--secondary-color);
+    font-size: var(--font-2xl);
+}
+
+
+/* First Page End */
+
+/* Media Queries Start */
+
+@media (max-width: 1280px) {
+    
+}
+
+@media (max-width: 1024px) {
+    .firstPageContainer {
+        padding: 0 100px;
+    }
+    .firstPageContainerContentsText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        height: 50%;
+        width: 60%;
+    }
+    .firstPageContainerContentsText h1 {
+        font-size: var(--font-4xl);
+        line-height: 2.5rem;
+    }
+    .firstPageContainerContentsText h2 {
+        font-size: var(--font-lg);
+        text-align: left;
+    }
+    .firstPageContainerContentsButton a {
+        padding: 10px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .firstPageContainer {
+        padding: 0 130px;
+    }
+    .firstPageContainerContentsText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 100%;
+    }
+    .firstPageContainerContentsText h1 {
+        font-size: var(--font-5xl);
+        line-height: 3rem;
+        text-align: center;
+    }
+    .firstPageContainerContentsText hr {
+        margin: 25px 0;
+    }
+    .firstPageContainerContentsText h2 {
+        font-size: var(--font-xl);
+        text-align: center;
+    }
+    .firstPageContainerContentsButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .firstPageContainerContentsButton a {
+        padding: 12px 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .navTitle {
+        font-size: var(--font-xl);
+    }
+    .navContents a {
+        display: none;
+    }
+    .navContents button {
+        display: block;
+        font-size: var(--font-xl);
+        color: var(--primary-color);
+        background-color: var(--font-color);
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 100ms ease;
+    }
+    .navContents button:hover {
+        background-color: #afbcb3;
+        color: var(--primary-color);
+    }
+    .navContents button:focus {
+        box-shadow: 0 0 0 2px var(--secondary-color), 0 0 0 4px var(--primary-color);
+    }
+    
+    .firstPage {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .firstPageContainer {
+        padding: 0 50px;
+    }
+    .firstPageContainerContents {
+        text-align: center;
+        height: 100%;
+    }
+    .firstPageContainerContentsText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    .firstPageContainerContentsText h1 {
+        margin-top: 50px;
+        font-size: var(--font-4xl);
+        font-family: var(--poppins);
+        line-height: 2.5rem;
+    }
+    .firstPageContainerContentsText hr {
+        width: 100%;
+    }
+    .firstPageContainerContentsText h2 {
+        font-size: var(--font-xl);
+        line-height: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .firstPageContainerContentsText {
+        height: 85%;
+    }
+}
+
+/* Media Queries End */
